@@ -49,10 +49,12 @@ The Dataset consists of the qualitative and the quantitative parameters of the s
 
 ### Implementation
 Python (2.7) is used as it has good compatability with Machine Learning by using scikit learn, numpy, matplotlib libraries.  
-The 3D plot of qualitative parameters, quantitative parameters and the probability of being placed is mapped in the 3D space and then for prediction. Graph is as shown:
+The 3D plot of qualitative parameters, quantitative parameters and the probability of being placed is mapped in the 3D space and then for prediction.  
+There are multiple methods of plotting the data, two of which are given in this repository.  
+1. Averaging the values of the parameters and represent it as a 3D plot. _Graph is as shown:_  
 ![3D Color coded plot of data](Figure_1.png)  
   
-T-Distributed Stochastic Neighbor Embedding (TSNE) is applied to visualize Higher Dimensional data into Lower Dimensions. Graph is as shown:
+2. T-Distributed Stochastic Neighbor Embedding (TSNE) is used to visualize Higher Dimensional data into Lower Dimensions. In this method, the parameters are combined by using TSNE method (sklearn.manifold.TSNE) to obtain a 2D plot. _Graph is as shown:_  
 ![2D Visualization of 16D data](Figure_2.png)  
   
 K-Nearest Neighbour is then applied to the data.
