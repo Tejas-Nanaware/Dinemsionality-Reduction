@@ -49,9 +49,10 @@ w16=data[:,15]
 x=(w1+w3+w8+w10+w12+w13+w14+w15)/8
 y=(w2+w4+w5+w6+w7+w9+w11+w15)/8
 z=w16
-ax.scatter(x,y,z, marker='o', c=z, cmap='viridis')
+three_d = ax.scatter(x,y,z, marker='o', c=z, cmap='jet')
+plt.colorbar(three_d)
 
-ax.set_xlabel('Computational Skills')
-ax.set_ylabel('Interpersonal Skills')
+ax.set_xlabel('Qualitative Parameters')
+ax.set_ylabel('Quantitative Parameters')
 ax.set_zlabel('Probability Of Placement')
 plt.show()
