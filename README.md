@@ -28,7 +28,8 @@ Quantitative Parameters:
 
 # Implementation
 Python (2.7) is used as it has good compatability with Machine Learning by using numpy, matplotlib libraries.  
-The 3D plot of qualitative parameters, quantitative parameters and the probability of being placed is mapped in the 3D space and then for prediction. Graph is as shown:  
-![3D Color coded plot of data](Figure_1.png)
+The 3D plot of qualitative parameters, quantitative parameters and the probability of being placed is mapped in the 3D space and then for prediction. Graph is as shown:
+![3D Color coded plot of data](Figure_1.png)  
+  
 T-Distributed Stochastic Neighbor Embedding (TSNE) is applied to visualize Higher Dimensional data into Lower Dimensions. 
 K-Nearest Neighbour is then applied to the data.
