@@ -2,6 +2,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
+from sklearn.decomposition import PCA
 
 # import file
 data = np.loadtxt("Book11.txt", delimiter='\t', skiprows=1)
@@ -62,12 +63,24 @@ ax.set_title('Average of Qualitative & Quantitative vs Probability of Placement'
 plt.show()
 
 # Implementing TSNE for plotting 16D data into 2D
-X_embedded = TSNE(n_components=2).fit_transform(data[:,:].values)
+X_embedded = TSNE(n_components=2).fit_transform(data[:,:])
 
 plt.figure()
-two_d = plt.scatter(X_embedded[:, 0], X_embedded[:, 1], c=z)
-plt.colorbar(two_d)
-plt.xlabel('Skills in %')
-plt.ylabel('Probability of being placed in %')
+two_d_tsne = plt.scatter(X_embedded[:, 0], X_embedded[:, 1], c=z)
+plt.colorbar(two_d_tsne)
+plt.xlabel('Skills')
+plt.ylabel('Probability of being placed')
 plt.title('Represented Higher Dimensions to 2D using TSNE')
+plt.show()
+
+# Implementing PCA to reduce dimensions
+pca = PCA(n_components=2)
+pca_result = pca.fit_transform(data)
+
+plt.figure()
+two_d_pca = plt.scatter(pca_result[:, 0], pca_result[:, 1], c=z)
+plt.colorbar(two_d_pca)
+plt.xlabel('Skills')
+plt.ylabel('Probability of being placed')
+plt.title('Represented Higher Dimensions to 2D using PCA')
 plt.show()
