@@ -58,7 +58,7 @@ There are multiple methods of plotting the data, two of which are given in this 
 ![2D Visualization of 16D data](Figure_2.png)  
   
 3. Principal Component Analysis (PCA) is used to visualize Higher Dimensional data into Lower Dimensions. In this method, the parameters are combined by using TSNE method (sklearn.decomposition.PCA) to obtain a 2D plot. _Graph is as shown:_  
-![2D Visualization of 16D data](Figure_2.png)  
+![2D Visualization of 16D data](Figure_3.png)  
 The only difference is that the TSNE preserves the distances and it works better when there are huge number of dimensions.  
 
 K-Nearest Neighbour is then applied to the data.
